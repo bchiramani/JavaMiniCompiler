@@ -1,0 +1,14 @@
+class  MAIN{
+public static void main( String[] args )
+{
+int a;
+a =5;
+}
+
+}
+
+class  Test { 
+public executer(){
+print("hi");
+}
+}
