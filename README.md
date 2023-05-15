@@ -1,5 +1,5 @@
 # Mini Java Compiler
-The task at hand is to develop a Mini Java Compiler as part of a mini project. The specific tasks required for completion can be found at this link: https://www.insat.ucar.tn/GL/4/Compilation/project.
+The task at hand is to develop a Mini Java Compiler as part of a mini project. 
 
 
 ## Process
@@ -17,3 +17,20 @@ During this step, using the syntax_analysis. we  verify the syntax of the input 
 ### Semantic analysis 
 
 We need to develop a semantic analyser that evaluates the significance of the input program. We create then an executable file .The input is the abstract syntax tree produced by the parser. 
+The semantix_analysis.c file implements a symbol table for managing variables, functions, and parameters of the java code. It provides functions for adding entries to the symbol table, performing various checks and operations on the entries, and handling errors and warnings.The defined functions are :
+* creerDico(): Initializes the symbol table by allocating memory.
+* ajouterEntree(): Adds an entry to the symbol table with the provided information.
+* recherche(): Searches for an identifier in the symbol table and returns its index.
+* checkIdentifier(): Checks if an identifier has already been declared and adds it to the symbol table if not.
+* checkUtilise(): Checks if a variable is declared before being used.
+* Initialiser() and checkInitialise(): Handle variable initialization and check if variables are initialized before use.
+* Utiliser() and checkUtiliseWar(): Handle variable usage and check if variables are used after declaration.
+* checkReturn(): Checks if a function that returns a type contains a return statement.
+
+### Code Generation
+the code_generation.c file is related to generating the intermediate machine code for the compiled program.The main functions are :
+* addCommand() is used to add a command to the code table.
+* strcpy() is used to copy string values into the respective fields of the new entry.
+* displayTable() is implemented to print the contents of the code table
+* addOperator() is provided to add operators to the code table...
+The nbCodes variable is incremented to keep track of the number of entries.
